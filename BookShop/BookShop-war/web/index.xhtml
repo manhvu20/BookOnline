@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//VN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Book List</title>
+        <meta charset="UTF-8"></meta>
+    </h:head>
+    <h:body>
+        Danh sách sách
+        <h:dataTable border="1" cellpadding="3" value="#{bookBean.bookList}" var="item">
+            <h:column>
+                <f:facet name="header">Tên sách</f:facet>
+                #{item.title}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Tác giả</f:facet>
+                #{item.description}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Giá</f:facet>
+                #{item.price}
+            </h:column>    
+            <h:column>
+                <f:facet name="header"></f:facet>
+                <h:form style="width: 50px;">
+                    <h:commandButton style="width: 100%;" value="Insert" action="#{bookBean.delete(item.id)}"/>
+                </h:form>
+            </h:column> 
+            <h:column>
+                <f:facet name="header"></f:facet>
+                <h:form style="width: 50px;">
+                    <h:commandButton style="width: 100%;" value="Update" action="#{bookBean.delete(item.id)}"/>
+                </h:form>
+            </h:column> 
+            <h:column>
+                <f:facet name="header"></f:facet>
+                <h:form style="width: 50px;">
+                    <h:commandButton style="width: 100%;" value="Delete" action="#{bookBean.delete(item.id)}"/>
+                </h:form>
+            </h:column> 
+        </h:dataTable>
+        <a href="addBook.xhtml">Thêm sách</a>
+    </h:body>
+</html>
+

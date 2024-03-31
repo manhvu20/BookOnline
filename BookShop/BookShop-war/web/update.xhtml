@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Update Book</title>
+    </h:head>
+    <h:body>
+        <h2>Chỉnh sửa sách</h2>
+        <h:form>
+            <div>
+                <p>Mã sách: </p><h:inputText style="width: 300px; height: 20px" readonly="true"  value="#{bookBean.book.id}"/>
+            </div> 
+            <div>
+                <p>Tên sách: </p><h:inputText style="width: 300px;  height: 50px"  value="#{bookBean.book.title}"/>
+            </div>    
+            <div>
+                <p>>Mô tả: </p><h:inputTextarea style="width: 300px;  height: 20px" value="#{bookBean.book.description}"/>
+            </div>
+            <div>
+                <p>Giá: </p><h:inputText style="width: 300px;  height: 20px" value="#{bookBean.book.price}"/>
+            </div>            
+            <h:commandButton style="margin-top: 20px" value="Save" action="#{bookBean.update()}"/>
+            
+        </h:form>
+</h:body>
+</html>

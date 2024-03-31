@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Book Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        .form-row {
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            display: inline-block;
+            width: 120px;
+        }
+        .form-row input[type="text"],
+        .form-row textarea {
+            width: calc(100% - 120px);
+        }
+    </style>
+</head>
+<body>
+    <h2>Form thêm sách mới</h2>
+    <form action="#" method="post">
+        <div class="form-row">
+            <label for="bookName">Tên sách:</label>
+            <input type="text" id="bookName" name="bookName"/>
+        </div>
+        <div class="form-row">
+            <label for="description">Mô tả:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="price">Giá:</label>
+            <input type="text" id="price" name="price"/>
+        </div>
+        <div class="form-row">
+            <input type="submit" value="Save"/>
+        </div>
+    </form>
+</body>
+</html>
+
